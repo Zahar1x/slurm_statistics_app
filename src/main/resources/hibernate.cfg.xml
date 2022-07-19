@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mariadb://localhost:3306/slurm_acct_db</property>
+        <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">dz0239489</property>
+        <mapping class="ru.zaharix.slurmstat.entities.AcctCoordTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.AcctTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusResTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterAssocTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterAssocUsageDayTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterAssocUsageHourTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterAssocUsageMonthTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterEventTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterJobTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterLastRanTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterResvTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterStepTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterSuspendTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterUsageDayTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterUsageHourTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterUsageMonthTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterWckeyTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterWckeyUsageDayTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterWckeyUsageHourTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ClusterWckeyUsageMonthTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ConvertVersionTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.FederationTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.QosTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.ResTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.TableDefsTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.TresTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.TxnTableEntity"/>
+        <mapping class="ru.zaharix.slurmstat.entities.UserTableEntity"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
