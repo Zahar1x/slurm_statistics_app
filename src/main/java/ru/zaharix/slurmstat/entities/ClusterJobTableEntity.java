@@ -17,7 +17,7 @@ public class ClusterJobTableEntity {
     private byte deleted;
     @Basic
     @Column(name = "account")
-    private Object account;
+    private String account;
     @Basic
     @Column(name = "admin_comment")
     private String adminComment;
@@ -59,7 +59,7 @@ public class ClusterJobTableEntity {
     private int flags;
     @Basic
     @Column(name = "job_name")
-    private Object jobName;
+    private String jobName;
     @Basic
     @Column(name = "id_assoc")
     private int idAssoc;
@@ -71,7 +71,7 @@ public class ClusterJobTableEntity {
     private int idArrayTask;
     @Basic
     @Column(name = "id_block")
-    private Object idBlock;
+    private String idBlock;
     @Basic
     @Column(name = "id_job")
     private int idJob;
@@ -104,7 +104,7 @@ public class ClusterJobTableEntity {
     private int stateReasonPrev;
     @Basic
     @Column(name = "mcs_label")
-    private Object mcsLabel;
+    private String mcsLabel;
     @Basic
     @Column(name = "mem_req")
     private long memReq;
@@ -119,7 +119,7 @@ public class ClusterJobTableEntity {
     private String nodeInx;
     @Basic
     @Column(name = "partition")
-    private Object partition;
+    private String partition;
     @Basic
     @Column(name = "priority")
     private int priority;
@@ -149,7 +149,7 @@ public class ClusterJobTableEntity {
     private String gresUsed;
     @Basic
     @Column(name = "wckey")
-    private Object wckey;
+    private String wckey;
     @Basic
     @Column(name = "work_dir")
     private String workDir;
@@ -193,11 +193,11 @@ public class ClusterJobTableEntity {
         this.deleted = deleted;
     }
 
-    public Object getAccount() {
+    public String getAccount() {
         return account;
     }
 
-    public void setAccount(Object account) {
+    public void setAccount(String account) {
         this.account = account;
     }
 
@@ -305,11 +305,11 @@ public class ClusterJobTableEntity {
         this.flags = flags;
     }
 
-    public Object getJobName() {
+    public String getJobName() {
         return jobName;
     }
 
-    public void setJobName(Object jobName) {
+    public void setJobName(String jobName) {
         this.jobName = jobName;
     }
 
@@ -337,11 +337,11 @@ public class ClusterJobTableEntity {
         this.idArrayTask = idArrayTask;
     }
 
-    public Object getIdBlock() {
+    public String getIdBlock() {
         return idBlock;
     }
 
-    public void setIdBlock(Object idBlock) {
+    public void setIdBlock(String idBlock) {
         this.idBlock = idBlock;
     }
 
@@ -425,11 +425,11 @@ public class ClusterJobTableEntity {
         this.stateReasonPrev = stateReasonPrev;
     }
 
-    public Object getMcsLabel() {
+    public String getMcsLabel() {
         return mcsLabel;
     }
 
-    public void setMcsLabel(Object mcsLabel) {
+    public void setMcsLabel(String mcsLabel) {
         this.mcsLabel = mcsLabel;
     }
 
@@ -465,11 +465,11 @@ public class ClusterJobTableEntity {
         this.nodeInx = nodeInx;
     }
 
-    public Object getPartition() {
+    public String getPartition() {
         return partition;
     }
 
-    public void setPartition(Object partition) {
+    public void setPartition(String partition) {
         this.partition = partition;
     }
 
@@ -545,11 +545,11 @@ public class ClusterJobTableEntity {
         this.gresUsed = gresUsed;
     }
 
-    public Object getWckey() {
+    public String getWckey() {
         return wckey;
     }
 
-    public void setWckey(Object wckey) {
+    public void setWckey(String wckey) {
         this.wckey = wckey;
     }
 

@@ -23,10 +23,10 @@ public class ClusterWckeyTableEntity {
     private int idWckey;
     @Basic
     @Column(name = "wckey_name")
-    private Object wckeyName;
+    private String wckeyName;
     @Basic
     @Column(name = "user")
-    private Object user;
+    private String user;
 
     public long getCreationTime() {
         return creationTime;
@@ -72,7 +72,7 @@ public class ClusterWckeyTableEntity {
         return wckeyName;
     }
 
-    public void setWckeyName(Object wckeyName) {
+    public void setWckeyName(String wckeyName) {
         this.wckeyName = wckeyName;
     }
 
@@ -80,7 +80,7 @@ public class ClusterWckeyTableEntity {
         return user;
     }
 
-    public void setUser(Object user) {
+    public void setUser(String user) {
         this.user = user;
     }
 

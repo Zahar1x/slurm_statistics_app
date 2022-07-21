@@ -7,29 +7,23 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 public class ClusResTableEntityPK implements Serializable {
-    @Column(name = "cluster")
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Object cluster;
-    @Column(name = "res_id")
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int resId;
+    private String cluster;
+    private int res_id;
 
     public Object getCluster() {
         return cluster;
     }
 
-    public void setCluster(Object cluster) {
+    public void setCluster(String cluster) {
         this.cluster = cluster;
     }
 
     public int getResId() {
-        return resId;
+        return res_id;
     }
 
     public void setResId(int resId) {
-        this.resId = resId;
+        this.res_id = resId;
     }
 
     @Override
@@ -39,16 +33,16 @@ public class ClusResTableEntityPK implements Serializable {
 
         ClusResTableEntityPK that = (ClusResTableEntityPK) o;
 
-        if (resId != that.resId) return false;
+        if (res_id != that.res_id) return false;
         if (cluster != null ? !cluster.equals(that.cluster) : that.cluster != null) return false;
 
         return true;
     }
-
+    public ClusResTableEntityPK() {}
     @Override
     public int hashCode() {
         int result = cluster != null ? cluster.hashCode() : 0;
-        result = 31 * result + resId;
+        result = 31 * result + res_id;
         return result;
     }
 }

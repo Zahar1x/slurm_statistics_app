@@ -24,16 +24,16 @@ public class ClusterAssocTableEntity {
     private int idAssoc;
     @Basic
     @Column(name = "user")
-    private Object user;
+    private String user;
     @Basic
     @Column(name = "acct")
-    private Object acct;
+    private String acct;
     @Basic
     @Column(name = "partition")
-    private Object partition;
+    private String partition;
     @Basic
     @Column(name = "parent_acct")
-    private Object parentAcct;
+    private String parentAcct;
     @Basic
     @Column(name = "lft")
     private int lft;
@@ -148,7 +148,7 @@ public class ClusterAssocTableEntity {
         return user;
     }
 
-    public void setUser(Object user) {
+    public void setUser(String user) {
         this.user = user;
     }
 
@@ -156,7 +156,7 @@ public class ClusterAssocTableEntity {
         return acct;
     }
 
-    public void setAcct(Object acct) {
+    public void setAcct(String acct) {
         this.acct = acct;
     }
 
@@ -164,7 +164,7 @@ public class ClusterAssocTableEntity {
         return partition;
     }
 
-    public void setPartition(Object partition) {
+    public void setPartition(String partition) {
         this.partition = partition;
     }
 
@@ -172,7 +172,7 @@ public class ClusterAssocTableEntity {
         return parentAcct;
     }
 
-    public void setParentAcct(Object parentAcct) {
+    public void setParentAcct(String parentAcct) {
         this.parentAcct = parentAcct;
     }
 

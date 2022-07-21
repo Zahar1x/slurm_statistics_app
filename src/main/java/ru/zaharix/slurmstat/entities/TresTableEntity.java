@@ -17,10 +17,10 @@ public class TresTableEntity {
     private int id;
     @Basic
     @Column(name = "type")
-    private Object type;
+    private String type;
     @Basic
     @Column(name = "name")
-    private Object name;
+    private String name;
 
     public long getCreationTime() {
         return creationTime;
@@ -46,19 +46,19 @@ public class TresTableEntity {
         this.id = id;
     }
 
-    public Object getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Object type) {
+    public void setType(String type) {
         this.type = type;
     }
 
-    public Object getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Object name) {
+    public void setName(String name) {
         this.name = name;
     }
 

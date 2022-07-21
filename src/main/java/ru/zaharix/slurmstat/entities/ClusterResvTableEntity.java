@@ -40,7 +40,7 @@ public class ClusterResvTableEntity {
     private String tres;
     @Basic
     @Column(name = "unused_wall")
-    private Object unusedWall;
+    private String unusedWall;
 
     public int getIdResv() {
         return idResv;
@@ -122,11 +122,11 @@ public class ClusterResvTableEntity {
         this.tres = tres;
     }
 
-    public Object getUnusedWall() {
+    public String getUnusedWall() {
         return unusedWall;
     }
 
-    public void setUnusedWall(Object unusedWall) {
+    public void setUnusedWall(String unusedWall) {
         this.unusedWall = unusedWall;
     }
 

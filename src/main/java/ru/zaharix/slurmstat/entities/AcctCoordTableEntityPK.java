@@ -7,13 +7,9 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 public class AcctCoordTableEntityPK implements Serializable {
-    @Column(name = "acct")
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Object acct;
-    @Column(name = "user")
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Object user;
 
     public Object getAcct() {

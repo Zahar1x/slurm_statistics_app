@@ -1,6 +1,7 @@
 package ru.zaharix.slurmstat.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "clus_res_table", schema = "slurm_acct_db", catalog = "")
@@ -15,14 +16,14 @@ public class ClusResTableEntity {
     @Basic
     @Column(name = "deleted")
     private Byte deleted;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
     @Column(name = "cluster")
-    private String cluster;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String cluster;
     @Column(name = "res_id")
-    private int resId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int res_id;
     @Basic
     @Column(name = "percent_allowed")
     private Integer percentAllowed;
@@ -51,7 +52,7 @@ public class ClusResTableEntity {
         this.deleted = deleted;
     }
 
-    public Object getCluster() {
+    public String getCluster() {
         return cluster;
     }
 
@@ -60,11 +61,11 @@ public class ClusResTableEntity {
     }
 
     public int getResId() {
-        return resId;
+        return res_id;
     }
 
     public void setResId(int resId) {
-        this.resId = resId;
+        this.res_id = resId;
     }
 
     public Integer getPercentAllowed() {
@@ -84,7 +85,7 @@ public class ClusResTableEntity {
 
         if (creationTime != that.creationTime) return false;
         if (modTime != that.modTime) return false;
-        if (resId != that.resId) return false;
+        if (res_id != that.res_id) return false;
         if (deleted != null ? !deleted.equals(that.deleted) : that.deleted != null) return false;
         if (cluster != null ? !cluster.equals(that.cluster) : that.cluster != null) return false;
         if (percentAllowed != null ? !percentAllowed.equals(that.percentAllowed) : that.percentAllowed != null)
@@ -99,7 +100,7 @@ public class ClusResTableEntity {
         result = 31 * result + (int) (modTime ^ (modTime >>> 32));
         result = 31 * result + (deleted != null ? deleted.hashCode() : 0);
         result = 31 * result + (cluster != null ? cluster.hashCode() : 0);
-        result = 31 * result + resId;
+        result = 31 * result + res_id;
         result = 31 * result + (percentAllowed != null ? percentAllowed.hashCode() : 0);
         return result;
     }

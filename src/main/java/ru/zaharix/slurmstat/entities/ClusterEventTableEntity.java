@@ -22,7 +22,7 @@ public class ClusterEventTableEntity {
     private String clusterNodes;
     @Basic
     @Column(name = "reason")
-    private Object reason;
+    private String reason;
     @Basic
     @Column(name = "reason_uid")
     private int reasonUid;
@@ -69,7 +69,7 @@ public class ClusterEventTableEntity {
         return reason;
     }
 
-    public void setReason(Object reason) {
+    public void setReason(String reason) {
         this.reason = reason;
     }
 

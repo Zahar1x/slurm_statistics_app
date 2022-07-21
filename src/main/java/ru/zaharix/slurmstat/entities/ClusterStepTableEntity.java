@@ -71,7 +71,7 @@ public class ClusterStepTableEntity {
     private int sysUsec;
     @Basic
     @Column(name = "act_cpufreq")
-    private Object actCpufreq;
+    private String actCpufreq;
     @Basic
     @Column(name = "consumed_energy")
     private long consumedEnergy;
@@ -302,11 +302,11 @@ public class ClusterStepTableEntity {
         this.sysUsec = sysUsec;
     }
 
-    public Object getActCpufreq() {
+    public String getActCpufreq() {
         return actCpufreq;
     }
 
-    public void setActCpufreq(Object actCpufreq) {
+    public void setActCpufreq(String actCpufreq) {
         this.actCpufreq = actCpufreq;
     }
 

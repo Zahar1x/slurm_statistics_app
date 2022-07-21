@@ -20,7 +20,7 @@ public class ClusterTableEntity {
     private String name;
     @Basic
     @Column(name = "control_host")
-    private Object controlHost;
+    private String controlHost;
     @Basic
     @Column(name = "control_port")
     private int controlPort;
@@ -44,7 +44,7 @@ public class ClusterTableEntity {
     private Integer flags;
     @Basic
     @Column(name = "federation")
-    private Object federation;
+    private String federation;
     @Basic
     @Column(name = "features")
     private String features;
@@ -79,7 +79,7 @@ public class ClusterTableEntity {
         this.deleted = deleted;
     }
 
-    public Object getName() {
+    public String getName() {
         return name;
     }
 
@@ -87,11 +87,11 @@ public class ClusterTableEntity {
         this.name = name;
     }
 
-    public Object getControlHost() {
+    public String getControlHost() {
         return controlHost;
     }
 
-    public void setControlHost(Object controlHost) {
+    public void setControlHost(String controlHost) {
         this.controlHost = controlHost;
     }
 
@@ -151,11 +151,11 @@ public class ClusterTableEntity {
         this.flags = flags;
     }
 
-    public Object getFederation() {
+    public String getFederation() {
         return federation;
     }
 
-    public void setFederation(Object federation) {
+    public void setFederation(String federation) {
         this.federation = federation;
     }
 

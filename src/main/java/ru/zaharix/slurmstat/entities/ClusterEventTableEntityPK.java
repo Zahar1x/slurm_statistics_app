@@ -7,14 +7,8 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 public class ClusterEventTableEntityPK implements Serializable {
-    @Column(name = "time_start")
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long timeStart;
-    @Column(name = "node_name")
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Object nodeName;
+    private String nodeName;
 
     public long getTimeStart() {
         return timeStart;
@@ -28,7 +22,7 @@ public class ClusterEventTableEntityPK implements Serializable {
         return nodeName;
     }
 
-    public void setNodeName(Object nodeName) {
+    public void setNodeName(String nodeName) {
         this.nodeName = nodeName;
     }
 

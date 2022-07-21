@@ -21,10 +21,10 @@ public class TxnTableEntity {
     private String name;
     @Basic
     @Column(name = "actor")
-    private Object actor;
+    private String actor;
     @Basic
     @Column(name = "cluster")
-    private Object cluster;
+    private String cluster;
     @Basic
     @Column(name = "info")
     private byte[] info;
@@ -61,19 +61,19 @@ public class TxnTableEntity {
         this.name = name;
     }
 
-    public Object getActor() {
+    public String getActor() {
         return actor;
     }
 
-    public void setActor(Object actor) {
+    public void setActor(String actor) {
         this.actor = actor;
     }
 
-    public Object getCluster() {
+    public String getCluster() {
         return cluster;
     }
 
-    public void setCluster(Object cluster) {
+    public void setCluster(String cluster) {
         this.cluster = cluster;
     }
 

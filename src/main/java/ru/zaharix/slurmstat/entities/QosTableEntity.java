@@ -20,7 +20,7 @@ public class QosTableEntity {
     private int id;
     @Basic
     @Column(name = "name")
-    private Object name;
+    private String name;
     @Basic
     @Column(name = "description")
     private String description;
@@ -153,11 +153,11 @@ public class QosTableEntity {
         this.id = id;
     }
 
-    public Object getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Object name) {
+    public void setName(String name) {
         this.name = name;
     }
 

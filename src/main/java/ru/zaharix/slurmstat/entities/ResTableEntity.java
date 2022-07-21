@@ -20,16 +20,16 @@ public class ResTableEntity {
     private int id;
     @Basic
     @Column(name = "name")
-    private Object name;
+    private String name;
     @Basic
     @Column(name = "description")
     private String description;
     @Basic
     @Column(name = "manager")
-    private Object manager;
+    private String manager;
     @Basic
     @Column(name = "server")
-    private Object server;
+    private String server;
     @Basic
     @Column(name = "count")
     private Integer count;
@@ -72,11 +72,11 @@ public class ResTableEntity {
         this.id = id;
     }
 
-    public Object getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Object name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -88,19 +88,19 @@ public class ResTableEntity {
         this.description = description;
     }
 
-    public Object getManager() {
+    public String getManager() {
         return manager;
     }
 
-    public void setManager(Object manager) {
+    public void setManager(String manager) {
         this.manager = manager;
     }
 
-    public Object getServer() {
+    public String getServer() {
         return server;
     }
 
-    public void setServer(Object server) {
+    public void setServer(String server) {
         this.server = server;
     }
 
